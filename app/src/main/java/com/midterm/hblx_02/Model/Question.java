@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Question {
     private String id;
+    private String description;
     private ArrayList<String> answer;
     private ArrayList<String> result;
     private String pathImage;
@@ -12,11 +13,20 @@ public class Question {
     public Question() {
     }
 
-    public Question(ArrayList<String> answer, ArrayList<String> result, String pathImage, ArrayList<String> userResult) {
+    public Question(String description, ArrayList<String> answer, ArrayList<String> result, String pathImage, ArrayList<String> userResult) {
+        this.description = description;
         this.answer = answer;
         this.result = result;
         this.pathImage = pathImage;
         this.userResult = userResult;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public ArrayList<String> getAnswer() {
