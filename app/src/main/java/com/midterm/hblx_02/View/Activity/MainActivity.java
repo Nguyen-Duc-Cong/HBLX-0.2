@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.midterm.hblx_02.Model.Photo;
 import com.midterm.hblx_02.R;
@@ -19,12 +24,11 @@ import me.relex.circleindicator.CircleIndicator3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewPager2 mViewPager2;
     private List<Photo> mListPhoto;
     private CircleIndicator3 mCircleIndicator3;
-
     private Handler mHandler = new Handler();
     private Runnable mRunable = new Runnable() {
         @Override
@@ -85,5 +89,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mHandler.postDelayed(mRunable, 3000);
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        Intent intent=null;
+        switch (view.getId()){
+            case R.id.layout_Learning:
+                // Click layout, button Học
+          //      intent = new Intent(this,LearningActivity.class);
+                break;
+            case R.id.layout_Contest:
+                // Click layout, button Thi
+                intent = new Intent(MainActivity.this,ContestWelcome.class);
+                break;
+            case R.id.layout_SearchRule:
+                // Click layout, button tra cứu luật
+                break;
+            default:
+                Toast.makeText(this, "Chức năng chưa được sử dụng", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        try{
+            startActivity(intent);
+        }catch (Exception e){}
     }
 }
