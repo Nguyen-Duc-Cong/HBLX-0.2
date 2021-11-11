@@ -10,7 +10,7 @@ import android.os.Handler;
 import com.midterm.hblx_02.Model.Photo;
 import com.midterm.hblx_02.R;
 import com.midterm.hblx_02.ViewModel.ZoomOutPageTransformer;
-import com.midterm.hblx_02.ViewModel.photoViewPagerAdapter;
+import com.midterm.hblx_02.View.Adapter.photoViewPagerAdapter;
 
 import me.relex.circleindicator.CircleIndicator3;
 

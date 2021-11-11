@@ -1,4 +1,4 @@
-package com.midterm.hblx_02.ViewModel;
+package com.midterm.hblx_02.View.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
