@@ -10,7 +10,7 @@ public class Question {
     private String pathImage;
     private ArrayList<String> userResult;
 
-    public Question() {
+    public Question(String des, ArrayList<String> ans, ArrayList<Integer> rlt, String path) {
     }
 
     public Question(String description, ArrayList<String> answer, ArrayList<String> result, String pathImage, ArrayList<String> userResult) {
