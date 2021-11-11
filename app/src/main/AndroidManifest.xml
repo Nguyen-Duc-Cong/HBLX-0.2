@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HBLX02">
         <activity
-            android:name=".ViewModel.Activity.MainActivity"
+            android:name=".View.Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
