@@ -33,9 +33,11 @@ android {
 
 
 dependencies {
+
+    //Support Image Slider
+    implementation 'me.relex:circleindicator:2.1.6'
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
     def room_version = "2.3.0"
 
     implementation "androidx.room:room-runtime:$room_version"
@@ -56,4 +58,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
 }
