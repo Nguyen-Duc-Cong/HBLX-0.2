@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager2 mViewPager2;
     private List<Photo> mListPhoto;
     private CircleIndicator3 mCircleIndicator3;
+
     private Handler mHandler = new Handler();
     private Runnable mRunable = new Runnable() {
         @Override
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.layout_Contest:
                 // Click layout, button Thi
-//                intent = new Intent(MainActivity.this,ContestWelcome.class);
+                intent = new Intent(MainActivity.this,ContestWelcome.class);
                 break;
             case R.id.layout_SearchRule:
                 // Click layout, button tra cứu luật

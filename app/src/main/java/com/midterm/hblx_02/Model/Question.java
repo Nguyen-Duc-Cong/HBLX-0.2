@@ -1,7 +1,5 @@
 package com.midterm.hblx_02.Model;
 
-import androidx.annotation.NonNull;
-
 import java.util.ArrayList;
 
 public class Question {
@@ -12,8 +10,6 @@ public class Question {
     private String pathImage;
     private ArrayList<Integer> userResult;
 
-    public Question() {
-    }
 
     public Question(String description, ArrayList<String> answer, ArrayList<Integer> result, String pathImage) {
         this.description = description;
@@ -39,14 +35,6 @@ public class Question {
         this.answer = answer;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public ArrayList<Integer> getResult() {
         return result;
     }
@@ -69,11 +57,5 @@ public class Question {
 
     public void setUserResult(ArrayList<Integer> userResult) {
         this.userResult = userResult;
-    }
-
-    @NonNull
-    @Override
-    public String toString() {
-        return super.toString();
     }
 }
