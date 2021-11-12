@@ -29,6 +29,7 @@ android {
     buildFeatures{
         viewBinding true
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
@@ -37,8 +38,13 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.jetbrains:annotations:15.0'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation "androidx.drawerlayout:drawerlayout:1.1.1"
     def room_version = "2.3.0"
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-rxjava2:$room_version"

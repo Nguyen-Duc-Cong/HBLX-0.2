@@ -1,7 +1,5 @@
 package com.midterm.hblx_02.Model;
-/**
- * Created by vanso on 3/22/2017.
- */
+
 
 public class Custom_Row_Answer {
 

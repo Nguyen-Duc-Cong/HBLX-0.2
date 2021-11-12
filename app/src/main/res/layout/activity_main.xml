@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="-1dp" />
 
     <me.relex.circleindicator.CircleIndicator3
         android:id="@+id/cicrle_indicator"
@@ -38,8 +40,10 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/layout_Contest"
                 android:layout_width="120dp"
                 android:layout_height="100dp"
+                android:onClick="onClick"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
@@ -69,6 +73,8 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="100dp"
+                android:id="@+id/layout_Learning"
+                android:onClick="onClick"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
@@ -166,6 +172,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/layout_SearchRule"
                 android:layout_width="120dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
