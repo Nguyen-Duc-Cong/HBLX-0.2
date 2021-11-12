@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager2 mViewPager2;
     private List<Photo> mListPhoto;
     private CircleIndicator3 mCircleIndicator3;
+
     private Handler mHandler = new Handler();
     private Runnable mRunable = new Runnable() {
         @Override
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.layout_Learning:
                 // Click layout, button Học
-          //      intent = new Intent(this,LearningActivity.class);
+                intent = new Intent(this,TypeOfQuestionActivity.class);
                 break;
             case R.id.layout_Contest:
                 // Click layout, button Thi

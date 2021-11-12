@@ -1,6 +1,5 @@
 package com.midterm.hblx_02.Model;
 
-
 public class Custom_Row_Answer {
 
     // Lưu trạng thái được chọn hay không ?

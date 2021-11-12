@@ -18,15 +18,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp">
-
             <TextView
                 android:id="@+id/learning_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:paddingTop="5dp"
-                android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?"
                 android:textColor="@color/colorPrimary3"
-                android:textStyle="bold" />
+                android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?"/>
 
             <ImageView
                 android:id="@+id/learning_image_question"
@@ -48,7 +47,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="#7BB972">
 
@@ -58,14 +57,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="#7BB972"
+                android:backgroundTint="@color/colorPrimary3"
                 android:onClick="onClick"
                 android:text="14:59"
                 android:textColor="@color/white"
-                android:textSize="17dp"
                 android:textStyle="bold" />
 
             <Button

@@ -24,6 +24,10 @@
         <activity android:name=".View.Activity.ContestDetail">
 
         </activity>
+        <activity android:name=".View.Activity.TypeOfQuestionActivity">
+
+        </activity>
+        <activity android:name=".View.Activity.LearningActivity"></activity>
     </application>
 
 </manifest>

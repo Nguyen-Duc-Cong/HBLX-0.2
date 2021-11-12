@@ -35,8 +35,6 @@ public class Question {
         this.answer = answer;
     }
 
-
-
     public ArrayList<Integer> getResult() {
         return result;
     }

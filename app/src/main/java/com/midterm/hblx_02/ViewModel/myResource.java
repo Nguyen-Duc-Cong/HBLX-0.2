@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-
 public class myResource {
     private StringBuilder builder;
     private InputStream is;

@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_learning"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:ignore="MissingClass">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -45,56 +46,43 @@
             </ListView>
         </RelativeLayout>
 
-
+        <!--ActionBar Button-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="#7BB972">
 
-            <Button
-                android:id="@+id/contest_btnTime"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:id="@+id/learning_btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="#7BB972"
+                android:background="@null"
                 android:onClick="onClick"
-                android:text="14:59"
-                android:textColor="@color/white"
-                android:textSize="17dp"
-                android:textStyle="bold" />
+                app:srcCompat="@mipmap/ic_chevron_left_white_36dp" />
 
-            <Button
-                android:id="@+id/contest_btnShowResult"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_alignParentRight="true"
+            <ImageButton
+                android:id="@+id/learning_btnResult"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:background="@color/colorPrimary2"
+                android:background="@null"
                 android:onClick="onClick"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="Xem đáp án"
-                android:textColor="@color/white"
-                android:visibility="invisible" />
+                app:srcCompat="@mipmap/ic_check_white_36dp" />
 
-            <Button
-                android:id="@+id/contest_btnSubmit"
+            <ImageButton
+                android:id="@+id/learning_btnNext"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
-                android:background="@mipmap/ic_check_circle_white_36dp"
+                android:background="@null"
                 android:onClick="onClick"
-                android:textColor="@color/white"
-                app:srcCompat="@mipmap/ic_check_circle_white_36dp" />
+                app:srcCompat="@mipmap/ic_chevron_right_white_36dp" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -103,7 +91,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white">
-
-    </ListView>
+        android:background="@color/white"></ListView>
 </androidx.drawerlayout.widget.DrawerLayout>
