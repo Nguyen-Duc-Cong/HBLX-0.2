@@ -12,15 +12,15 @@ public class Question {
     private String pathImage;
     private ArrayList<Integer> userResult;
 
-    public Question(String des, ArrayList<String> ans, ArrayList<Integer> rlt, String path) {
+    public Question() {
     }
 
-    public Question(String description, ArrayList<String> answer, ArrayList<Integer> result, String pathImage, ArrayList<Integer> userResult) {
+    public Question(String description, ArrayList<String> answer, ArrayList<Integer> result, String pathImage) {
         this.description = description;
         this.answer = answer;
         this.result = result;
         this.pathImage = pathImage;
-        this.userResult = userResult;
+        this.userResult =new ArrayList<>();
     }
 
     public String getDescription() {
