@@ -1,5 +1,7 @@
 package com.midterm.hblx_02.Model;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 
 public class Question {
@@ -67,5 +69,11 @@ public class Question {
 
     public void setUserResult(ArrayList<Integer> userResult) {
         this.userResult = userResult;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

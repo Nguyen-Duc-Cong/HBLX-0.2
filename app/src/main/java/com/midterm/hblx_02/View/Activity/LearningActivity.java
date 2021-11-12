@@ -12,7 +12,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -39,18 +38,20 @@ public class LearningActivity extends AppCompatActivity implements View.OnClickL
     private ImageButton imgBack, imgNext;
     private ImageView imgView;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learing);
         initWidget();
         try {
-            indexBegin = (Integer.parseInt(getIntent().getStringExtra("begin")));
-            indexEnd = (Integer.parseInt(getIntent().getStringExtra("end")));
+            setIndexBegin(Integer.parseInt(getIntent().getStringExtra("begin")));
+            setIndexEnd(Integer.parseInt(getIntent().getStringExtra("end")));
             createListViewNavigation();
             createToggle();
-            myResource=(new myResource(getResources(),R.raw.resource));
-            createListViewAnswer(indexBegin);
+            setMyResource(new myResource(getResources(),R.raw.resource));
+            createListViewAnswer(getIndexBegin());
         }catch (Exception e){
+
+
             Toast.makeText(this,e.toString(), Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
@@ -96,10 +97,11 @@ public class LearningActivity extends AppCompatActivity implements View.OnClickL
     }
     private void createListViewAnswer(int index) throws Exception{
         ArrayList<Custom_Row_Answer> array = new ArrayList<>();
-        Question question = myResource.getIndex(index);
-        quesSelected=(question);
-
+        Question question = getMyResource().getIndex(index);
+        setQuesSelected(question);
+        System.out.println(question.getAnswer());
         for(String answer : question.getAnswer()){
+            System.out.println(answer.toString());
             array.add(new Custom_Row_Answer(answer,false));
         }
 
@@ -109,14 +111,14 @@ public class LearningActivity extends AppCompatActivity implements View.OnClickL
         listView_Answer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                adapterView = (parent);
+                setAdapterView(parent);
                 Custom_Row_Answer row = (Custom_Row_Answer) parent.getItemAtPosition(position);
                 row.setBit(!row.isBit());
                 Button btn = (Button) view.findViewById(R.id.lear_cus_btn);
-                btn.setBackgroundResource(row.isBit()? R.color.colorAccent : R.color.white);
+                btn.setBackgroundResource(row.isBit()? R.color.colorAccent : R.color.black);
             }
         });
-        rowIndexSelected = (index);
+        setRowIndexSelected(index);
         // update layout
         updateLayout(index,question.getDescription());
     }
@@ -126,13 +128,13 @@ public class LearningActivity extends AppCompatActivity implements View.OnClickL
         imgBack.setVisibility(View.VISIBLE);
         imgNext.setVisibility(View.VISIBLE);
 
-        if (index==indexBegin)
+        if (index==getIndexBegin())
             imgBack.setVisibility(View.INVISIBLE);
-        if(index==indexEnd)
+        if(index==getIndexEnd())
             imgNext.setVisibility(View.INVISIBLE);
 
         getSupportActionBar().setTitle("Câu số "+(index+1));
-        description.setText(des);
+        setDescription(des);
         loadImage(index);
     }
     private void loadImage(int index){
@@ -152,7 +154,84 @@ public class LearningActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View v){
+        switch (v.getId()){
+            case R.id.learning_btnBack:
+                try {
+                    createListViewAnswer(getRowIndexSelected()-1);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                break;
+            case R.id.learning_btnResult:
+                View view;
+                for(int i:getQuesSelected().getResult()){
+                    view = listView_Answer.getChildAt(i);
+                    view.setBackgroundResource(R.color.colorPrimary3);
+                }
+                break;
+            case R.id.learning_btnNext:
+                try {
+                    createListViewAnswer(getRowIndexSelected()+1);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                break;
+            default:
+                Toast.makeText(this, "Không tồn tại chức năng này", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
 
+    public myResource getMyResource() {
+        return myResource;
+    }
+
+    public void setMyResource(myResource myResource) {
+        this.myResource = myResource;
+    }
+
+    public void setDescription(String description) {
+        this.description.setText(description);
+    }
+
+    public Question getQuesSelected() {
+        return quesSelected;
+    }
+
+    public void setQuesSelected(Question quesSelected) {
+        this.quesSelected = quesSelected;
+    }
+
+    public int getRowIndexSelected() {
+        return rowIndexSelected;
+    }
+
+    public void setRowIndexSelected(int rowIndexSelected) {
+        this.rowIndexSelected = rowIndexSelected;
+    }
+
+    public AdapterView getAdapterView() {
+        return adapterView;
+    }
+
+    public void setAdapterView(AdapterView adapterView) {
+        this.adapterView = adapterView;
+    }
+
+    public int getIndexBegin() {
+        return indexBegin;
+    }
+
+    public void setIndexBegin(int indexBegin) {
+        this.indexBegin = indexBegin;
+    }
+
+    public int getIndexEnd() {
+        return indexEnd;
+    }
+
+    public void setIndexEnd(int indexEnd) {
+        this.indexEnd = indexEnd;
     }
 }

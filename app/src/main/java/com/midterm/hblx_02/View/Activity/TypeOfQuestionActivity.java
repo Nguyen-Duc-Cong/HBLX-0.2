@@ -24,12 +24,12 @@ public class TypeOfQuestionActivity extends AppCompatActivity implements View.On
 //                intent.putExtra("end","74");
 //                break;
             case R.id.layout_question_KNVQT:
-                intent = new Intent(this,LearningActivity.class);
+                intent = new Intent(this, LearningActivity.class);
                 intent.putExtra("begin","0");
                 intent.putExtra("end","74");
                 break;
             case R.id.layout_question_VHDDLX:
-                intent = new Intent(this,LearningActivity.class);
+                intent = new Intent(this, LearningActivity.class);
                 intent.putExtra("begin","75");
                 intent.putExtra("end","79");
                 break;
@@ -39,16 +39,19 @@ public class TypeOfQuestionActivity extends AppCompatActivity implements View.On
 //                intent.putExtra("end","74");
 //                break;
             case R.id.layout_question_BBDB:
-                intent = new Intent(this,LearningActivity.class);
+                intent = new Intent(this, LearningActivity.class);
                 intent.putExtra("begin","80");
                 intent.putExtra("end","115");
                 break;
             case R.id.layout_question_SH:
-                intent = new Intent(this,LearningActivity.class);
+                intent = new Intent(this, LearningActivity.class);
                 intent.putExtra("begin","116");
                 intent.putExtra("end","149");
                 break;
         }
+        try{
+            startActivity(intent);
+        }catch (Exception e){}
     }
 
     @Override

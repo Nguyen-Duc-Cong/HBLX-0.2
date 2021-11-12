@@ -98,11 +98,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.layout_Learning:
                 // Click layout, button Học
-          //      intent = new Intent(this,LearningActivity.class);
+                intent = new Intent(this,TypeOfQuestionActivity.class);
                 break;
             case R.id.layout_Contest:
                 // Click layout, button Thi
-                intent = new Intent(MainActivity.this,ContestWelcome.class);
+//                intent = new Intent(MainActivity.this,ContestWelcome.class);
                 break;
             case R.id.layout_SearchRule:
                 // Click layout, button tra cứu luật
