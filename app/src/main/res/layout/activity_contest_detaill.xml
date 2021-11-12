@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary3">
+            android:background="#7BB972">
 
             <Button
                 android:id="@+id/contest_btnTime"
@@ -61,11 +61,11 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimary3"
+                android:background="#7BB972"
                 android:onClick="onClick"
-                android:textSize="17dp"
                 android:text="14:59"
                 android:textColor="@color/white"
+                android:textSize="17dp"
                 android:textStyle="bold" />
 
             <Button

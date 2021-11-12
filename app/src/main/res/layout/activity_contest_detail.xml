@@ -47,9 +47,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary3"
-            android:layout_height="50dp">
+            android:background="#7BB972">
 
             <Button
                 android:id="@+id/contest_btnTime"
@@ -68,18 +68,19 @@
 
             <Button
                 android:id="@+id/contest_btnShowResult"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="10dp"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="Xem đáp án"
-                android:paddingLeft="15dp" android:paddingRight="15dp"
-                android:textColor="@color/white"
-                android:background="@color/colorPrimary2"
-                android:layout_centerVertical="true"
-                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorPrimary2"
                 android:onClick="onClick"
-                android:layout_height="36dp" />
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Xem đáp án"
+                android:textColor="@color/white"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/contest_btnSubmit"
