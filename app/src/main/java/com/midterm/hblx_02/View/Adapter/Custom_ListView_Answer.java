@@ -42,7 +42,7 @@ public class Custom_ListView_Answer extends ArrayAdapter<Custom_Row_Answer> {
         final Custom_Row_Answer row = getMyArray().get(position);
         tv.setText(row.getText());
         // Doi mau button binh thuong
-        btn.setBackgroundResource(row.isBit()?R.color.colorPrimary2:R.color.white);
+       // btn.setBackgroundResource(row.isBit()?R.color.colorPrimary4:R.color.custom_row_default);
 //        // Thay bang dau tich
 //        if (row.isBit())
 //            btn.setBackground(drawable);

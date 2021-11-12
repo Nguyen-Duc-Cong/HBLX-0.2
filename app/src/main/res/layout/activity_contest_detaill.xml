@@ -18,14 +18,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp">
+
             <TextView
                 android:id="@+id/learning_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:paddingTop="5dp"
+                android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?"
                 android:textColor="@color/colorPrimary3"
-                android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx?"/>
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/learning_image_question"
@@ -47,9 +48,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="55dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary3"
-            android:layout_height="50dp">
+            android:background="@color/colorPrimary3">
 
             <Button
                 android:id="@+id/contest_btnTime"
@@ -57,29 +58,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="@color/colorPrimary3"
+                android:background="@color/colorPrimary3"
                 android:onClick="onClick"
+                android:textSize="17dp"
                 android:text="14:59"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/contest_btnShowResult"
-                android:layout_width="wrap_content"
-                android:layout_marginRight="10dp"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="Xem đáp án"
-                android:paddingLeft="15dp" android:paddingRight="15dp"
-                android:textColor="@color/white"
-                android:background="@color/colorPrimary2"
-                android:layout_centerVertical="true"
-                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorPrimary2"
                 android:onClick="onClick"
-                android:layout_height="36dp" />
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Xem đáp án"
+                android:textColor="@color/white"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/contest_btnSubmit"

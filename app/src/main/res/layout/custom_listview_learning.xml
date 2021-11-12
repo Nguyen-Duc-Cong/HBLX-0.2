@@ -8,11 +8,12 @@
             android:enabled="false"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginLeft="10dp"
+
             android:layout_gravity="center"
-            android:background="@color/white"
+            android:background="@drawable/button_border"
             app:srcCompat="@mipmap/ic_android_white_18dp" />
         <TextView
             android:id="@+id/lear_cus_txt"
